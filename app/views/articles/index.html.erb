@@ -1,0 +1,13 @@
+<% if @articles.blank? %>
+<p>There are no article currently in the system.</p>
+<% else %>
+<p>These are the current authors in our system</p>
+
+<ul id = "article">
+   <% @articles.each do |a| %>
+   <li><%=link_to a.auth_name, article_path(a.id) %>           <%= a.blog.readtime %> </li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new article", new_article_path %></p>

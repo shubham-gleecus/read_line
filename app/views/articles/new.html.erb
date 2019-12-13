@@ -1,0 +1,10 @@
+<h1>Add new article</h1>
+
+<h1>Fill-up</h1>
+
+
+<%= form_for @article do |a|%>
+<%= a.text_field :auth_name%><br>
+<%= a.text_area :blog%>
+<%= a.submit%>
+<%end%>

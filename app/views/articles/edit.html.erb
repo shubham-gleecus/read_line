@@ -1,0 +1,9 @@
+<h1> <%= @article.auth_name %></h1>
+<h1> <%= @article.blog %></h1>
+
+<h2>To Edit that</h2>
+<%= form_for @article, action: "update", method: 'put' do |a|%>
+<%= a.text_field :auth_name%><br>
+<%= a.text_field :blog%>
+<%= a.submit%>
+<%end%>

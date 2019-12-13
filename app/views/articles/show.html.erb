@@ -1,0 +1,13 @@
+<h1>Name: <%= @article.auth_name %></h1>
+<h2>Content:</h2>
+<p id="article-content"><%= @article.blog%></p>
+<p>Read Time: <%= @article.blog.readtime %></p>
+<p id="js-read-time">Read Time from JS: <span></span></p>
+
+<%= link_to("edit", action: "edit", controller: "articles", id: @article.id)%>
+<br>
+<%#= link_to("Delete", "#{@country.id}", method: :delete)%>
+<%= link_to("Delete", article_path(@article.id), method: :delete)%>
+<hr />
+
+<%= link_to 'Back', action: 'index', controller: "articles" %>
